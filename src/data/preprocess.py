@@ -5,7 +5,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 import logging
 
-FILE = "part-01.json"
+FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\part-01.json"
 OUTPUT_PATH = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed"
 MIN_REVIEW_LENGTH = 30
 SAMPLES_PER_CLASS = 100000
