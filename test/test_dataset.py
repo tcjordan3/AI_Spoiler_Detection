@@ -1,4 +1,4 @@
-from src.models.dataset import load_data
+from src.data.dataset import load_data
 
 TRAIN_FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed\\train.csv"
 VAL_FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed\\val.csv"
