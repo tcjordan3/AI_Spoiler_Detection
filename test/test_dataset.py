@@ -4,6 +4,7 @@ TRAIN_FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed\\tr
 VAL_FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed\\val.csv"
 TEST_FILE = "C:\\Users\\Tyler\\repos\\AI_Spoiler_Detection\\data\\processed\\test.csv"
 
+# Load data
 train_loader, val_loader, test_loader = load_data(
     TRAIN_FILE, VAL_FILE, TEST_FILE, batch_size=8
 )
