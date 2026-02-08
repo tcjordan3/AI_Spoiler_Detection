@@ -3,6 +3,7 @@ from data.dataset import load_data
 from models.model import SpoilerClassifier
 from models.trainer import Trainer
 from pathlib import Path
+import os
 
 # Configure logger
 logging.basicConfig(
@@ -20,7 +21,11 @@ EPOCHS = 3
 DEVICE = 'cuda'
 
 # Data paths
-BASE_DIR = Path(__file__).parent.parent
+if 'COLAB_GPU' in os.environ or os.path.exists('/content'):
+    BASE_DIR = Path('/content/drive/MyDrive/AI_Spoiler_Detection')
+else:
+    BASE_DIR = Path(__file__).parent.parent
+
 TRAIN_PATH = BASE_DIR / 'data' / 'processed' / 'train.csv'
 VAL_PATH = BASE_DIR / 'data' / 'processed' / 'val.csv'
 TEST_PATH = BASE_DIR / 'data' / 'processed' / 'test.csv'
