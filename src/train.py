@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 # Hyperparameters
 BATCH_SIZE = 32
 LEARNING_RATE = 1e-5
-EPOCHS = 5
+EPOCHS = 3
 DEVICE = 'cuda'
 
 # Data paths
