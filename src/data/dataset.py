@@ -10,7 +10,7 @@ class SpoilerDataset(Dataset):
     Handles loading CSV and tokenizing text for BERT
     """
     
-    def __init__(self, csv_path, tokenizer: BertTokenizer, max_length=512):
+    def __init__(self, csv_path, tokenizer: BertTokenizer, max_length=256):
         """
         Initialize dataset
         
