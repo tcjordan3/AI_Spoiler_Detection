@@ -20,8 +20,6 @@ LEARNING_RATE = 1e-5
 EPOCHS = 5
 DEVICE = 'cuda'
 
-logger.info(f"BATCH SIZE: {BATCH_SIZE}, LEARNING RATE: {LEARNING_RATE}, EPOCHS: {EPOCHS}")
-
 # Data paths
 if 'COLAB_GPU' in os.environ or os.path.exists('/content'):
     BASE_DIR = Path('/content/drive/MyDrive/AI_Spoiler_Detection')
@@ -33,6 +31,8 @@ VAL_PATH = BASE_DIR / 'data' / 'processed' / 'val.csv'
 TEST_PATH = BASE_DIR / 'data' / 'processed' / 'test.csv'
 
 def main():
+    logger.info(f"BATCH SIZE: {BATCH_SIZE}, LEARNING RATE: {LEARNING_RATE}, EPOCHS: {EPOCHS}")
+    
     # 1. Load data
     train_loader, val_loader, test_loader = load_data(TRAIN_PATH, VAL_PATH, TEST_PATH, BATCH_SIZE)
 
