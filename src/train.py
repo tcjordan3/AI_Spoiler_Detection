@@ -20,6 +20,8 @@ LEARNING_RATE = 1e-5
 EPOCHS = 5
 DEVICE = 'cuda'
 
+logger.info(f"BATCH SIZE: {BATCH_SIZE}, LEARNING RATE: {LEARNING_RATE}, EPOCHS: {EPOCHS}")
+
 # Data paths
 if 'COLAB_GPU' in os.environ or os.path.exists('/content'):
     BASE_DIR = Path('/content/drive/MyDrive/AI_Spoiler_Detection')
