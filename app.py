@@ -6,6 +6,8 @@ from src.models.model import SpoilerClassifier
 from src.data.dataset import SpoilerDataset
 from transformers import BertTokenizer
 
+from huggingface_hub import hf_hub_download
+
 # Page config
 st.set_page_config(
     page_title="Spoiler Detection",
@@ -26,10 +28,14 @@ def load_model():
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 
+    model_path = hf_hub_download(
+        repo_id="tcjordan3/bert-base-spoiler-detection",
+        filename="best_model.pt"
+    )
+
     # Load model from checkpoint
     model = SpoilerClassifier(freeze_bert=False)
-    checkpoint_path = 'src/models/best_model.pt'
-    model.load_state_dict(torch.load(checkpoint_path, map_location=device, weights_only=True))
+    model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
 
     # Set to eval mode
     model.to(device)

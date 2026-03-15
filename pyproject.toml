@@ -1,9 +1,38 @@
 [project]
 name = "spoiler-detection"
-version = "0.1.0"
+version = "1.0.0"
+description = "BERT-based spoiler detection for movie and TV reviews"
+authors = [
+    {name = "Tyler Jordan"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+license = {text = "MIT"}
+keywords = ["machine-learning", "nlp", "bert", "spoiler-detection", "text-classification"]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "transformers>=4.30.0",
+    "streamlit>=1.30.0",
+    "pandas>=1.5.0",
+    "numpy>=1.24.0",
+    "beautifulsoup4>=4.11.0",
+    "tqdm>=4.65.0",
+    "huggingface-hub>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "jupyter>=1.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/tcjordan3/AI_Spoiler_Detection"
+"Model Card" = "https://huggingface.co/tcjordan3/bert-base-spoiler-detection"
 
 [build-system]
-requires = ["setuptools>=65.0.0"]
+requires = ["setuptools>=65.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
