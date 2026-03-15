@@ -210,3 +210,4 @@ data/inspect_data.py
 data/part-01.json
 
 data/processed/*.csv
+src/models/*.pt
